@@ -143,24 +143,24 @@ def main():
     create_dir(DIR)
 
     hf = np.zeros((SIZE, SIZE), dtype=np.float32)
-#
-    #for x in range(0, SIZE):
-    #    for y in range(0, SIZE):
-    #        hf[x, y] = fbm_noise(x + OFFSET_X, y + OFFSET_Y)
-#
-    #save_heightfield(hf, DIR + 'hf_fbm_noise.png')
-#
-    #for x in range(0, SIZE):
-    #    for y in range(0, SIZE):
-    #        hf[x, y] = billowy_noise(x + OFFSET_X, y + OFFSET_Y)
-#
-    #save_heightfield(hf, DIR + 'hf_billoy_noise.png')
-#
-    #for x in range(0, SIZE):
-    #    for y in range(0, SIZE):
-    #        hf[x, y] = ridged_noise(x + OFFSET_X, y + OFFSET_Y)
-#
-    #save_heightfield(hf, DIR + 'hf_ridged_noise.png')
+
+    for x in range(0, SIZE):
+        for y in range(0, SIZE):
+            hf[x, y] = fbm_noise(x + OFFSET_X, y + OFFSET_Y)
+
+    save_heightfield(hf, DIR + 'hf_fbm_noise.png')
+
+    for x in range(0, SIZE):
+        for y in range(0, SIZE):
+            hf[x, y] = billowy_noise(x + OFFSET_X, y + OFFSET_Y)
+
+    save_heightfield(hf, DIR + 'hf_billoy_noise.png')
+
+    for x in range(0, SIZE):
+        for y in range(0, SIZE):
+            hf[x, y] = ridged_noise(x + OFFSET_X, y + OFFSET_Y)
+
+    save_heightfield(hf, DIR + 'hf_ridged_noise.png')
 
     for x in range(0, SIZE):
         for y in range(0, SIZE):
@@ -168,11 +168,11 @@ def main():
 
     save_heightfield(hf, DIR + 'hf_erosive_noise.png')
 
-    #for x in range(0, SIZE):
-    #    for y in range(0, SIZE):
-    #        hf[x, y] = erosive_billowed_noise(x + OFFSET_X, y + OFFSET_Y)
-#
-    #save_heightfield(hf, DIR + 'hf_erosive_billowed_noise.png')
+    for x in range(0, SIZE):
+        for y in range(0, SIZE):
+            hf[x, y] = erosive_billowed_noise(x + OFFSET_X, y + OFFSET_Y)
+
+    save_heightfield(hf, DIR + 'hf_erosive_billowed_noise.png')
 
     return
 
