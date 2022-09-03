@@ -9,3 +9,6 @@ This project showcases many "classical" terrain modelling algorithms that I
 reimplemented to produce examples as part of my dissertation.
 
 They are being made available for anyone else to reference and re-use.
+
+The noise function used are from [pysdnoise](https://github.com/open-terra/pysdnoise)
+which provides noise functions with derivates.
